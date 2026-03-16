@@ -1,16 +1,29 @@
 import { useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from './firebase/config'
+import { doc, getDoc } from 'firebase/firestore'
+import { auth, db } from './firebase/config'
 import LoginScreen from './screens/LoginScreen'
+import SetupScreen from './screens/SetupScreen'
 import HomeScreen from './screens/HomeScreen'
 
 export default function App() {
   const [user, setUser]       = useState(null)
+  const [userName, setUserName] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u)
+    const unsub = onAuthStateChanged(auth, async (u) => {
+      if (u) {
+        setUser(u)
+        // Check if user has a name set
+        const snap = await getDoc(doc(db, 'users', u.uid))
+        if (snap.exists() && snap.data().name) {
+          setUserName(snap.data().name)
+        }
+      } else {
+        setUser(null)
+        setUserName(null)
+      }
       setLoading(false)
     })
     return unsub
@@ -28,5 +41,7 @@ export default function App() {
     </div>
   )
 
-  return user ? <HomeScreen user={user} /> : <LoginScreen />
+  if (!user) return <LoginScreen />
+  if (!userName) return <SetupScreen user={user} onComplete={setUserName} />
+  return <HomeScreen user={user} userName={userName} />
 }
