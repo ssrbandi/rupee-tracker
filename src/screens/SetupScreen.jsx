@@ -60,15 +60,15 @@ export default function SetupScreen({ user, onComplete }) {
 const s = {
   container: {
     minHeight: '100vh',
-    background: '#0f0f13',
+    background: '#f5f5f5',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20
   },
   card: {
-    background: '#16161f',
-    border: '1px solid #ffffff12',
+    background: '#ffffff',
+    border: '1px solid #e5e7eb',
     borderRadius: 20,
     padding: 32,
     width: '100%',
@@ -76,44 +76,45 @@ const s = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 14
+    gap: 14,
+    boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
   },
   icon: {
     width: 64, height: 64,
-    background: '#a78bfa22',
-    border: '1px solid #a78bfa44',
+    background: '#f0edff',
+    border: '1px solid #d4caff',
     borderRadius: 20,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 28,
     fontWeight: 700,
-    color: '#a78bfa'
+    color: '#7c3aed'
   },
-  title:    { fontSize: 26, fontWeight: 700, color: '#fff', margin: 0 },
+  title:    { fontSize: 26, fontWeight: 700, color: '#1a1a1a', margin: 0 },
   subtitle: { fontSize: 14, color: '#888', margin: 0 },
   input: {
     width: '100%',
-    background: '#ffffff0d',
-    border: '1px solid #ffffff15',
+    background: '#f9fafb',
+    border: '1px solid #e5e7eb',
     borderRadius: 10,
     padding: '12px 14px',
-    color: '#fff',
+    color: '#1a1a1a',
     fontSize: 16,
     outline: 'none',
     boxSizing: 'border-box'
   },
   btn: {
     width: '100%',
-    background: '#a78bfa',
+    background: '#7c3aed',
     border: 'none',
     borderRadius: 12,
     padding: 14,
-    color: '#000',
+    color: '#fff',
     fontSize: 15,
     fontWeight: 700,
     cursor: 'pointer'
   },
-  phone: { fontSize: 11, color: '#444', margin: 0 },
-  error: { color: '#fca5a5', fontSize: 12, margin: 0 }
+  phone: { fontSize: 11, color: '#aaa', margin: 0 },
+  error: { color: '#ef4444', fontSize: 12, margin: 0 }
 }

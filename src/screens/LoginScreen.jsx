@@ -133,15 +133,15 @@ export default function LoginScreen() {
 const s = {
   container: {
     minHeight: '100vh',
-    background: '#0f0f13',
+    background: '#f5f5f5',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20
   },
   card: {
-    background: '#16161f',
-    border: '1px solid #ffffff12',
+    background: '#ffffff',
+    border: '1px solid #e5e7eb',
     borderRadius: 20,
     padding: 32,
     width: '100%',
@@ -149,28 +149,29 @@ const s = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 14
+    gap: 14,
+    boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
   },
   icon: {
     width: 64, height: 64,
-    background: '#a78bfa22',
-    border: '1px solid #a78bfa44',
+    background: '#f0edff',
+    border: '1px solid #d4caff',
     borderRadius: 20,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 28,
     fontWeight: 700,
-    color: '#a78bfa'
+    color: '#7c3aed'
   },
-  title:    { fontSize: 26, fontWeight: 700, color: '#fff', margin: 0 },
+  title:    { fontSize: 26, fontWeight: 700, color: '#1a1a1a', margin: 0 },
   subtitle: { fontSize: 13, color: '#888', margin: 0 },
   hint:     { fontSize: 12, color: '#888', margin: 0 },
   inputGroup: {
     display: 'flex',
     alignItems: 'center',
-    background: '#ffffff0d',
-    border: '1px solid #ffffff15',
+    background: '#f9fafb',
+    border: '1px solid #e5e7eb',
     borderRadius: 10,
     overflow: 'hidden',
     width: '100%'
@@ -179,25 +180,25 @@ const s = {
     padding: '12px 10px 12px 14px',
     color: '#888',
     fontSize: 14,
-    borderRight: '1px solid #ffffff15'
+    borderRight: '1px solid #e5e7eb'
   },
   input: {
     flex: 1,
     background: 'transparent',
     border: 'none',
     padding: '12px 14px',
-    color: '#fff',
+    color: '#1a1a1a',
     fontSize: 16,
     outline: 'none',
     letterSpacing: 1
   },
   otpInput: {
     width: '100%',
-    background: '#ffffff0d',
-    border: '1px solid #ffffff15',
+    background: '#f9fafb',
+    border: '1px solid #e5e7eb',
     borderRadius: 10,
     padding: 14,
-    color: '#fff',
+    color: '#1a1a1a',
     fontSize: 28,
     textAlign: 'center',
     outline: 'none',
@@ -206,11 +207,11 @@ const s = {
   },
   btn: {
     width: '100%',
-    background: '#a78bfa',
+    background: '#7c3aed',
     border: 'none',
     borderRadius: 12,
     padding: 14,
-    color: '#000',
+    color: '#fff',
     fontSize: 15,
     fontWeight: 700,
     cursor: 'pointer'
@@ -222,5 +223,5 @@ const s = {
     fontSize: 13,
     cursor: 'pointer'
   },
-  error: { color: '#fca5a5', fontSize: 12, margin: 0 }
+  error: { color: '#ef4444', fontSize: 12, margin: 0 }
 }
